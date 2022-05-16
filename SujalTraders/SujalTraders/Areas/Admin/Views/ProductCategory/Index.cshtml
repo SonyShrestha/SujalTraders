@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ProductCategory>
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<partial name="_Notification" />
+<a class="btn btn-light" asp-controller="ProductCategory" asp-action="Upsert"> Create</a>
+<br /><br />
+<table class="table table-hover">
+    <tr class="table-info">
+        <th>
+            Id
+        </th>
+        <th>
+            Product Category
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                <a class="btn btn-outline-dark" asp-controller="ProductCategory" asp-action="Upsert" asp-route-id="@item.Id">  Edit</a>
+                <a class="btn btn-outline-dark" asp-controller="ProductCategory" asp-action="Delete" asp-route-id="@item.Id">  Delete</a> 
+
+            </td>
+        </tr>
+    }
+</table>

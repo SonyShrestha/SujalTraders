@@ -1,0 +1,101 @@
+﻿@model SujalTraders.DataAccess.ViewModels.ProductVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<partial name="_Notification" />
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+    <div>
+        <div class="row pb-2">
+            <h2 class="text-primary">@(Model.Product.Id!=0?"Update":"Create") Product</h2>
+        </div>
+        <input asp-for="Product.Id" hidden />
+        <input asp-for="Product.ImageURL" hidden />
+        <div>
+            <img src="@Model.Product.ImageURL" 
+                 width="200" style="border-radius:5px; border:1px solid #000000; float:right"
+                 />
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.ProductCode"></label>
+            <input asp-for="Product.ProductCode" class="form-control" />
+            <span asp-validation-for="Product.ProductCode"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Name"></label>
+            <input asp-for="Product.Name" class="form-control" />
+            <span asp-validation-for="Product.Name"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Description"></label>
+            <textarea asp-for="Product.Description" class="form-control"></textarea>
+            <span asp-validation-for="Product.Description"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.AvailableQuantity"></label>
+            <input asp-for="Product.AvailableQuantity" class="form-control" />
+            <span asp-validation-for="Product.AvailableQuantity"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.UnitPrice"></label>
+            <input asp-for="Product.UnitPrice" class="form-control" />
+            <span asp-validation-for="Product.UnitPrice"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.ImageURL"></label>
+            <input type="file" asp-for="Product.ImageURL" name="formFile" class="form-control" />
+            <span asp-validation-for="Product.ImageURL"></span>
+        </div>
+
+        <div class="row pad-4">
+            <div class="form-group">
+                <label asp-for="Product.ProductSubCategoryId"></label>
+                <select asp-for="Product.ProductSubCategoryId" asp-items="@Model.ProductSubCategoryList" class="form-select">
+                    <option disabled selected>---- Select Product Sub-Category ----</option>
+                </select>
+            </div>
+        </div>
+
+        @if (Model.Product.Id != 0)
+        {
+            <button type="submit" class="btn btn-primary">Update</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary" onclick="ValidateInput()">Create</button>
+        }
+        <a class="btn btn-secondary" asp-controller="Product" asp-action="Index"> Back To List</a>
+    </div>
+</form>
+
+@section Scripts{
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+            toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+
+        function ValidateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+}

@@ -1,0 +1,15 @@
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\SujalTraders.DataAccess.deps.json
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\SujalTraders.DataAccess.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\ref\SujalTraders.DataAccess.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\SujalTraders.DataAccess.pdb
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\SujalTraders.Models.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\bin\Release\net5.0\SujalTraders.Models.pdb
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.csproj.AssemblyReference.cache
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.AssemblyInfoInputs.cache
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.AssemblyInfo.cs
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.csproj.CopyComplete
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\ref\SujalTraders.DataAccess.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.DataAccess\obj\Release\net5.0\SujalTraders.DataAccess.pdb

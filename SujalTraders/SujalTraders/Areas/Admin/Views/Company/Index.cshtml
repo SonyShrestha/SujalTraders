@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Company>
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<partial name="_Notification" />
+<a class="btn btn-light" asp-controller="Company" asp-action="Upsert"> Create</a>
+<br /><br />
+<table id="tblData" class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr class="table-info">
+            <th>
+                Name
+            </th>
+            <th>
+                Street Address
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                Postal Code
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+</table>
+
+@section Scripts{ 
+<script src="~/js/company.js"></script>
+}

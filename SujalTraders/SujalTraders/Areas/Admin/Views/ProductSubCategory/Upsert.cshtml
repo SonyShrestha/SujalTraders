@@ -1,0 +1,49 @@
+﻿@model SujalTraders.DataAccess.ViewModels.ProductSubCategoryVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<partial name="_Notification" />
+<form method="post">
+    <div class="border row">
+        <div>
+            <br />
+            <h2 class="text-primary">@(Model.ProductSubCategory.Id!=0?"Update":"Create") Product Sub-Category</h2>
+            <hr />
+        </div>
+
+        <input asp-for="ProductSubCategory.Id" hidden/>
+        <div class="form-group">
+            <label asp-for="ProductSubCategory.Name"></label>
+            <input asp-for="ProductSubCategory.Name" class="form-control" />
+            <span asp-validation-for="ProductSubCategory.Name"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ProductSubCategory.Description"></label>
+            <input asp-for="ProductSubCategory.Description" class="form-control" />
+            <span asp-validation-for="ProductSubCategory.Description"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ProductSubCategory.ProductCategoryId"></label>
+            <select asp-for="ProductSubCategory.ProductCategoryId" asp-items="@Model.ProductCategoryList" class="form-select">
+                <option disabled selected>---- Select Product Category ----</option>
+            </select>
+        </div>
+
+        <div>
+            @if (Model.ProductSubCategory.Id != 0)
+            {
+                <button type="submit" class="btn btn-primary">Update</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">Create</button>
+            }
+            <a class="btn btn-secondary" asp-controller="ProductSubCategory" asp-action="Index"> Back To List</a>
+            <br />
+            <br />
+        </div>
+    </div>
+</form>

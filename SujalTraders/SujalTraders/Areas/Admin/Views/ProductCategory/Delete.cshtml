@@ -1,0 +1,33 @@
+﻿@model ProductCategory
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<partial name="_Notification" />
+<form method="post">
+
+    <div class="border row">
+        <div>
+            <br />
+            <h2 class="text-primary">Delete Product Category</h2>
+            <hr />
+        </div>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" disabled />
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+            <a class="btn btn-secondary" asp-controller="ProductCategory" asp-action="Index" style="width:150px"> Back To List</a>
+            <br />
+            <br />
+        </div>
+       
+    </div>
+</form>

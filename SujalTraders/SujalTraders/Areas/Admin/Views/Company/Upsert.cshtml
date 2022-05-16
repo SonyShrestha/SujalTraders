@@ -1,0 +1,62 @@
+﻿@model SujalTraders.Models.Models.Company
+@{
+    ViewData["Title"] = "Create";
+}
+
+<partial name="_Notification" />
+<form method="post" asp-action="Upsert">
+    <div>
+        <div class="row pb-2">
+            <h2 class="text-primary">@(Model.Id!=0?"Update":"Create") Company</h2>
+        </div>
+        <input asp-for="Id" hidden />
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="StreetAddress"></label>
+            <input asp-for="StreetAddress" class="form-control" />
+            <span asp-validation-for="StreetAddress"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control"/>
+            <span asp-validation-for="City"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="State"></label>
+            <input asp-for="State" class="form-control" />
+            <span asp-validation-for="State"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PostalCode"></label>
+            <input asp-for="PostalCode" class="form-control" />
+            <span asp-validation-for="PostalCode"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PhoneNumber"></label>
+            <input  asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber"></span>
+        </div>
+
+       
+
+        @if (Model.Id != 0)
+        {
+            <button type="submit" class="btn btn-primary">Update</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary">Create</button>
+        }
+        <a class="btn btn-secondary" asp-controller="Company" asp-action="Index"> Back To List</a>
+    </div>
+</form>
+

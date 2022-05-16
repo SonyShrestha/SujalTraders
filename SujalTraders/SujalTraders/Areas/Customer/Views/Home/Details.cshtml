@@ -1,0 +1,22 @@
+﻿@model SujalTraders.Models.Models.ShoppingCart
+<div class="card container">
+    <div class="row">
+        <div class="col-4">
+            <img src="@Model.Product.ImageURL" style="height:400px;width:400px" />
+        </div>
+        <div class="card-header col-8">
+            <p class="text-primary">@Model.Product.Name</p>
+            <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
+            <p class="text-secondary">Available Quantity: @Model.Product.AvailableQuantity</p>
+            <p class="text-secondary">Price: Rs @Model.Product.UnitPrice</p>
+            <div>
+                @Model.Count
+            </div>
+            <div>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Back to List</a>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Add to Cart</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
