@@ -14,6 +14,7 @@ namespace SujalTraders.Repository.UnitOfWork
         IProduct ProductRepository { get; }
 
         ICompany CompanyRepository { get; }
+        IShoppingCart ShoppingCartRepository { get; }
         void Save();
     }
 }

@@ -19,6 +19,7 @@ namespace SujalTraders.DataAccess.Data
        public DbSet<Product> md_products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Company> Company { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
     }
 }

@@ -39,6 +39,12 @@ namespace SujalTraders
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnitOfWork, ImpUnitOfWork>();
             services.AddRazorPages();
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
 
 
         }

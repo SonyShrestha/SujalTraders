@@ -35,7 +35,7 @@ namespace SujalTraders.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Upsert(int? id)
         {
-            
+
             if (id == null || id == 0)
             {
                 Company companyUser = new();
@@ -45,7 +45,7 @@ namespace SujalTraders.Areas.Admin.Controllers
             else
             {
                 var companyUsersFromDb = _unitOfWork.CompanyRepository.GetFirstOrDefault((int)id);
-                
+
                 if (companyUsersFromDb == null)
                 {
                     return NotFound();
@@ -64,7 +64,7 @@ namespace SujalTraders.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 if (companyUser.Id == 0)
                 {
                     _unitOfWork.CompanyRepository.Insert(companyUser);
@@ -98,7 +98,7 @@ namespace SujalTraders.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Error while deleting" });
             }
 
-            
+
             _unitOfWork.CompanyRepository.Delete(id);
             _unitOfWork.Save();
             TempData["success"] = "Company User deleted successfully!";

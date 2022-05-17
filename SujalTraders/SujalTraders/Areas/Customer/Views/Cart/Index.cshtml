@@ -1,0 +1,49 @@
+﻿@model SujalTraders.DataAccess.ViewModels.ShoppingCartVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="p-2">
+    <div class="row">
+        <div class="col-10">
+            <h5>Shopping Cart Details</h5>
+        </div>
+        <div class="col-2" >
+            <a asp-area="Customer" asp-action="Index" asp-controller="Home" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    </div>
+    @foreach (var item in Model.cartList)
+    {
+        <div class="row">
+            <div class="col-3">
+                <img src="@item.Product.ImageURL" style="height:50px;width:50px" />
+            </div>
+            <div class="col-2">
+                @item.Product.Name
+            </div>
+            <div class="col-3">
+                 @Html.Raw(item.Product.Description)
+            </div>
+          
+            <div class="col-2">
+                @(item.Product.UnitPrice.ToString("c"))&nbsp;X&nbsp;@(item.Count)
+            </div>
+            <div class="col-2">
+                <a asp-action="plus" asp-route-routeId="@item.Id" class="btn btn-secondary">+</a>
+                <a asp-action="minus" asp-route-routeId="@item.Id" class="btn btn-secondary">-</a>
+                <a asp-action="remove" asp-route-routeId="@item.Id" class="btn btn-secondary">Remove</a>
+            </div>
+        </div>
+        <hr />
+        
+
+    }
+</div>
+<div>
+    Total:
+    <input asp-for="cartTotal" style="float:right" disabled value="@Model.cartTotal.ToString("c")"/>
+</div>
+<div class="p-2 m-2">
+    <input type="button" class="btn btn-primary" value="Summary"/>
+</div>
+

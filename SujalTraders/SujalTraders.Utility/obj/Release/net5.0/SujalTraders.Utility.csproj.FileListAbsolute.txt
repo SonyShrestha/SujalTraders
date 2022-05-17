@@ -9,4 +9,3 @@ C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Utility\obj\R
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Utility\obj\Release\net5.0\SujalTraders.Utility.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Utility\obj\Release\net5.0\ref\SujalTraders.Utility.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Utility\obj\Release\net5.0\SujalTraders.Utility.pdb
-C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Utility\obj\Release\net5.0\SujalTraders.Utility.csproj.AssemblyReference.cache

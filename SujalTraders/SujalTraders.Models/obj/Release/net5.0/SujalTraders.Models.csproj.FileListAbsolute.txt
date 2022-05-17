@@ -2,7 +2,6 @@ C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\bin\Re
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\bin\Release\net5.0\SujalTraders.Models.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\bin\Release\net5.0\ref\SujalTraders.Models.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\bin\Release\net5.0\SujalTraders.Models.pdb
-C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\obj\Release\net5.0\SujalTraders.Models.csproj.AssemblyReference.cache
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\obj\Release\net5.0\SujalTraders.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\obj\Release\net5.0\SujalTraders.Models.AssemblyInfoInputs.cache
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders.Models\obj\Release\net5.0\SujalTraders.Models.AssemblyInfo.cs

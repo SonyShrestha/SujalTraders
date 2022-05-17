@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SujalTraders.Models.Models;
 using SujalTraders.Repository.UnitOfWork;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace SujalTraders.Controllers
@@ -29,14 +31,36 @@ namespace SujalTraders.Controllers
             return View(productList);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int productId)
         {
             ShoppingCart shoppingCart = new()
             {
-                Product = _unitOfWork.ProductRepository.GetByID(id),
+                Product = _unitOfWork.ProductRepository.GetByID(productId),
                 Count=1
             };
             return View(shoppingCart);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Details(ShoppingCart shoppingCart)
+        {
+            var claimsIdentity =(ClaimsIdentity) User.Identity;
+            var claim=claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            shoppingCart.ApplicationUserId = claim.Value;
+
+            ShoppingCart shoppingCartFromDb = _unitOfWork.ShoppingCartRepository.GetFirstOrDefault(c => c.ApplicationUserId == claim.Value && c.ProductId==shoppingCart.ProductId);
+            if (shoppingCartFromDb == null)
+            {  
+                _unitOfWork.ShoppingCartRepository.Insert(shoppingCart);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCartRepository.IncrementCount(shoppingCartFromDb, shoppingCart.Count);
+            }
+            _unitOfWork.Save();
+            return RedirectToAction("Index","Cart");
         }
 
         public IActionResult Privacy()

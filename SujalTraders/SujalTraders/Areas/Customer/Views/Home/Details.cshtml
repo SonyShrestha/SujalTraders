@@ -1,22 +1,23 @@
 ﻿@model SujalTraders.Models.Models.ShoppingCart
-<div class="card container">
-    <div class="row">
-        <div class="col-4">
-            <img src="@Model.Product.ImageURL" style="height:400px;width:400px" />
-        </div>
-        <div class="card-header col-8">
-            <p class="text-primary">@Model.Product.Name</p>
-            <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
-            <p class="text-secondary">Available Quantity: @Model.Product.AvailableQuantity</p>
-            <p class="text-secondary">Price: Rs @Model.Product.UnitPrice</p>
-            <div>
-                @Model.Count
+<form method="post">
+    <div class="card container">
+        <div class="row">
+            <input asp-for="@Model.Product.Id" disabled />
+            <div class="col-4">
+                <img src="@Model.Product.ImageURL" style="height:400px;width:400px" />
             </div>
-            <div>
-                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Back to List</a>
-                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Add to Cart</a>
+            <div class="card-header col-8">
+                <p class="text-primary">@Model.Product.Name</p>
+                <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
+                <p class="text-secondary">Available Quantity: @Model.Product.AvailableQuantity</p>
+                <p class="text-secondary">Price: Rs @Model.Product.UnitPrice</p>
+                <input type="number" asp-for="Count" value="@Model.Count" class="form-control"/>
+                <div>
+                    <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Back to List</a>
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                </div>
+
             </div>
-            
         </div>
     </div>
-</div>
+</form>

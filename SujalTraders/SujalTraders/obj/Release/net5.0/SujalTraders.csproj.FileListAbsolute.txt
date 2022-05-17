@@ -144,8 +144,10 @@ C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\n
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.DataAccess.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Models.dll
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Utility.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.DataAccess.pdb
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Models.pdb
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Utility.pdb
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\SujalTraders.csproj.AssemblyReference.cache
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\SujalTraders.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\SujalTraders.AssemblyInfoInputs.cache
@@ -176,6 +178,7 @@ C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\n
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Admin\Views\Product\Upsert.cshtml.g.cs
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Customer\Views\Home\Index - Copy.cshtml.g.cs
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
@@ -237,5 +240,3 @@ C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\n
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\ref\SujalTraders.dll
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\SujalTraders.pdb
 C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\obj\Release\net5.0\SujalTraders.genruntimeconfig.cache
-C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Utility.dll
-C:\Users\i33847\Sony\github\SujalTraders\SujalTraders\SujalTraders\bin\Release\net5.0\SujalTraders.Utility.pdb
